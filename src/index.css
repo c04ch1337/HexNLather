@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-cinzel: 'Cinzel', serif;
+    --font-cinzel-dec: 'Cinzel Decorative', serif;
+    --font-script: 'Pinyon Script', cursive;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cinzel-dec {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+}
+
+.font-script {
+  font-family: 'Pinyon Script', cursive;
+}
+
+/* Custom Gothic & Celestial Glows */
+.glow-pink-text {
+  text-shadow: 0 0 12px rgba(255, 42, 133, 0.75), 0 0 25px rgba(255, 42, 133, 0.45);
+}
+
+.glow-pink-box {
+  box-shadow: 0 0 35px -5px rgba(255, 42, 133, 0.25), 0 0 15px -3px rgba(224, 26, 105, 0.3);
+}
+
+.glow-pink-subtle {
+  box-shadow: 0 0 20px -2px rgba(255, 42, 133, 0.15);
+}
+
+.text-metallic-pink {
+  background: linear-gradient(135deg, #ffd3ea 0%, #ff69b4 30%, #ff1493 60%, #ff80bf 85%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-metallic-rose {
+  background: linear-gradient(180deg, #fff2f8 0%, #f472b6 40%, #db2777 80%, #9d174d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Celestial background subtle smoky haze */
+.bg-gothic-smoke {
+  background-color: #070308;
+  background-image: 
+    radial-gradient(circle at 50% 10%, rgba(255, 42, 133, 0.14) 0%, transparent 60%),
+    radial-gradient(circle at 85% 30%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 15% 65%, rgba(255, 20, 147, 0.1) 0%, transparent 55%),
+    radial-gradient(circle at 50% 90%, rgba(225, 29, 72, 0.12) 0%, transparent 60%);
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.9; transform: scaleY(1); }
+  25% { opacity: 0.7; transform: scaleY(0.96) skewX(1deg); }
+  50% { opacity: 1; transform: scaleY(1.05) skewX(-1deg); }
+  75% { opacity: 0.8; transform: scaleY(0.98); }
+}
+
+.animate-candle-flame {
+  animation: flicker 2.4s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090509;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b102f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff2a85;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Hex & Lather | Luxury Handcrafted Soap",
+  "description": "More than soap... it's a ritual. Luxury handcrafted soaps, natural ingredients, and gothic celestial self-care with a darker touch.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
